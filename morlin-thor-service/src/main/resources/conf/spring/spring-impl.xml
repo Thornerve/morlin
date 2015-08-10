@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ss="http://www.springframework.org/schema/security"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+   	http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee.xsd
+   	http://www.springframework.org/schema/context  http://www.springframework.org/schema/context/spring-context.xsd
+   	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd
+   	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+   	http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components 
+
+	<bean id="propertyConfig" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="order" value="0" />
+		<property name="ignoreUnresolvablePlaceholders" value="true" />
+		<property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" /> 
+		<property name="fileEncoding" value="UTF-8" />
+		<property name="locations">
+		  <list>
+			<value>classpath:conf/main_setting.properties</value>
+		  </list>
+		</property>
+	</bean>-->
+	
+	<!-- <import resource="classpath:redis/scl-redis-client.xml"/> -->
+	
+	<!-- 静态资源配置文件 
+		<bean id="resConfiger" class="com.saic.ebiz.mall.util.PropertiesConfiger">
+			<property name="resource">
+				<value>classpath:conf/prop/res_setting.properties</value>
+			</property>
+		</bean>
+	-->
+	
+	<!-- 代码管理系统初始化Bean -->
+    <bean id="constantCodeInit" class="com.morlin.thor.constant.ConstantCodeInit" />
+    
+    <!-- gson -->
+    <bean id="gson" class="com.google.gson.Gson" />
+    
+</beans>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap namespace="t_try_drive_420">
+
+<!-- 新增 -->
+	<sql id="insert">
+		<![CDATA[
+			INSERT INTO t_try_drive_420 (
+				vel_series_name,
+				customer_name,
+				phone,
+				create_time,
+				city,
+				area,
+				dealer_name,
+				activityName
+			)
+			VALUES (
+				:seriesName,
+				:customerName,
+				:phone,
+				:createTime,
+				:city,
+				:area,
+				:dealerName,
+				:activityName
+			)
+	    ]]>
+	</sql>
+
+<!-- 新增或修改 -->
+	<sql id="replace">
+		<![CDATA[
+			REPLACE INTO t_try_drive_420 (
+				vel_series_name,
+				customer_name,
+				phone,
+				create_time,
+				city,
+                area,
+                dealer_name,
+                activityName
+			)
+			VALUES (
+				:seriesName,
+				:customerName,
+				:phone,
+				:createTime,
+				:city,
+                :area,
+                :dealerName,
+                :activityName
+			)
+	    ]]>
+	</sql>
+
+<!-- 根据主键删除 -->
+	<sql id="deleteAll">
+		<![CDATA[
+			DELETE FROM t_try_drive_420 
+			WHERE 
+				1 = 1
+    	]]>
+	</sql>
+	
+<!-- 根据字段删除 -->
+  	<sql id="deleteByFields">
+		<![CDATA[
+			DELETE FROM t_try_drive_420 WHERE  1=1
+				AND  vel_series_name = :seriesName
+				AND  customer_name = :customerName
+				AND  phone = :phone
+				AND  create_time = :createTime
+				AND  city = :city
+				AND  area = :area
+    	]]>
+	</sql>
+
+</sqlMap>
