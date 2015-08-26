@@ -51,18 +51,6 @@
 			<artifactId>dom4j</artifactId>
 		</dependency>
 		
-		<!-- poi -->
-     	<dependency> 
-            <groupId>org.apache.poi</groupId> 
-            <artifactId>poi</artifactId> 
-            <version>3.9</version> 
-        </dependency> 
-        <dependency> 
-            <groupId>org.apache.poi</groupId> 
-            <artifactId>poi-ooxml</artifactId> 
-            <version>3.9</version> 
-        </dependency>
-		
 		<!-- slf4j -->
 		<dependency>
 			<groupId>org.slf4j</groupId>
